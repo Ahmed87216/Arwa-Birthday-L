@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Arwa ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+background:linear-gradient(135deg,#f7a4c5,#ffdce9);
+color:#8b5270;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.box{
+width:92%;
+max-width:600px;
+background:#fff9fc;
+border-radius:30px;
+padding:35px 22px;
+text-align:center;
+box-shadow:0 20px 50px #a8557840;
+}
+
+h1{
+font-size:48px;
+color:#e66f9f;
+margin:15px 0;
+}
+
+h2{
+color:#e66f9f;
+}
+
+.cake{
+font-size:75px;
+}
+
+button{
+border:0;
+background:#ed82ad;
+color:white;
+padding:15px 25px;
+border-radius:30px;
+font-size:16px;
+margin:8px;
+cursor:pointer;
+}
+
+.gifts{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.gift{
+height:150px;
+font-size:18px;
+}
+
+.gift span{
+display:block;
+font-size:55px;
+margin-bottom:10px;
+}
+
+.page{display:none}
+.active{display:block}
+
+.option{
+background:white;
+border:1px solid #f1c6d6;
+color:#8b5270;
+width:100%;
+border-radius:18px;
+margin:7px 0;
+padding:15px;
+}
+
+.answer{
+display:none;
+background:#fff0f6;
+padding:12px;
+border-radius:12px;
+margin-top:8px;
+}
+
+.open .answer{
+display:block;
+}
+
+.letter{
+background:white;
+padding:22px;
+border-radius:20px;
+line-height:2;
+text-align:right;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div id="home" class="page active">
+
+<div class="cake">🎂</div>
+
+<h1>Happy Birthday<br>Arwa ❤️</h1>
+
+<p>
+بما إني بعيد ومش هقدر أكون معاكي النهارده،
+<br>
+قلت أعملك حاجة صغيرة مخصوص ليكي.
+</p>
+
+<button onclick="page('gifts')">
+افتحي المفاجأة 🎁
+</button>
+
+</div>
+
+
+<div id="gifts" class="page">
+
+<h2>اختاري هدية 🎁</h2>
+
+<p>مفيش ترتيب صح 😂</p>
+
+<div class="gifts">
+
+<button class="gift" onclick="page('story')">
+<span>🎀</span>
+الهدية الأولى
+</button>
+
+<button class="gift" onclick="page('choose')">
+<span>💗</span>
+الهدية الثانية
+</button>
+
+<button class="gift" onclick="page('letter')">
+<span>💌</span>
+الهدية الأخيرة
+</button>
+
+</div>
+
+</div>
+
+
+<div id="story" class="page">
+
+<h2>3 شهور بس؟ 😂</h2>
+
+<p>
+الحقيقة إن الحكاية بدأت قبل التلات شهور دول بكتير.
+</p>
+
+<p>
+[اكتب هنا حكايتكم قبل الاعتراف]
+</p>
+
+<p>
+[اكتب هنا موقف الاعتراف]
+</p>
+
+<p>
+[اكتب هنا حاجة بتحبها في أول 3 شهور]
+</p>
+
+<button onclick="page('gifts')">
+رجوع 🎁
+</button>
+
+</div>
+
+
+<div id="choose" class="page">
+
+<h2>اختاري واحدة 👀</h2>
+
+<button class="option" onclick="this.classList.toggle('open')">
+حاجة بحبها فيكي
+<div class="answer">
+[اكتب السبب هنا]
+</div>
+</button>
+
+<button class="option" onclick="this.classList.toggle('open')">
+حاجة بتضحكني فيكي
+<div class="answer">
+[اكتب الموقف هنا]
+</div>
+</button>
+
+<button class="option" onclick="this.classList.toggle('open')">
+حاجة نفسي أعملها معاكي
+<div class="answer">
+[اكتب الحاجة اللي مستني تعملوها لما تنزل]
+</div>
+</button>
+
+<button class="option" onclick="this.classList.toggle('open')">
+حاجة مستنيها لما أنزل
+<div class="answer">
+[اكتب هنا]
+</div>
+</button>
+
+<button class="option" onclick="this.classList.toggle('open')">
+حاجة نفسي أقولهالك من زمان
+<div class="answer">
+[اكتب كلامك هنا]
+</div>
+</button>
+
+<br>
+
+<button onclick="page('gifts')">
+رجوع 🎁
+</button>
+
+</div>
+
+
+<div id="letter" class="page">
+
+<div class="cake">💌</div>
+
+<h2>آخر هدية</h2>
+
+<div class="letter">
+
+أروى،
+
+[اكتب رسالتك هنا بطريقتك أنت.]
+
+عارف إننا بقالنا 3 شهور 😂
+بس الحقيقة إننا ما بدأناش من 3 شهور بس.
+
+عيد ميلاد سعيد يا أروى ❤️
+
+وأيوه، أنا بعيد ومش هعرف أديكي حاجة بإيدي النهارده،
+بس أول ما أنزل لسه ليا معاكي عيد ميلاد متأخر 😌
+
+[اكتب خاتمتك هنا]
+
+</div>
+
+<button onclick="page('gifts')">
+رجوع 🎁
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function page(id){
+
+document.querySelectorAll('.page')
+.forEach(x=>x.classList.remove('active'));
+
+document.getElementById(id)
+.classList.add('active');
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+</body>
+</html>
