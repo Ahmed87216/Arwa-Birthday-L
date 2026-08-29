@@ -40,9 +40,7 @@ justify-content:center;
 align-items:center;
 }
 
-.page.active{
-display:flex;
-}
+.page.active{display:flex}
 
 .cake{
 font-size:75px;
@@ -129,10 +127,44 @@ font-size:60px;
 margin-bottom:12px;
 }
 
+.open-when{
+width:100%;
+}
+
+.open-card{
+width:100%;
+background:#fff;
+border:1px solid #f2cbd9;
+border-radius:20px;
+padding:17px;
+margin:7px 0;
+text-align:left;
+cursor:pointer;
+color:#87516c;
+font-size:15px;
+transition:.2s;
+}
+
+.open-card:hover{
+background:#fff5f8;
+}
+
+.open-message{
+display:none;
+background:#fff0f6;
+border-radius:14px;
+padding:13px;
+margin-top:10px;
+line-height:1.75;
+}
+
+.open-card.open .open-message{
+display:block;
+}
+
 .story{
 width:100%;
 text-align:left;
-margin-top:10px;
 }
 
 .story-item{
@@ -146,6 +178,52 @@ border:1px solid #f2cbd9;
 
 .story-item strong{
 color:#d66b99;
+}
+
+.letter{
+width:100%;
+background:#fff;
+border-radius:22px;
+padding:23px;
+text-align:left;
+line-height:2;
+font-size:16px;
+border:1px solid #f2cbd9;
+}
+
+.plan{
+width:100%;
+}
+
+.plan-box{
+background:#fff;
+border-radius:20px;
+padding:20px;
+border:1px solid #f2cbd9;
+width:100%;
+text-align:left;
+}
+
+.plan-box label{
+display:block;
+margin-top:12px;
+font-weight:bold;
+color:#d66b99;
+}
+
+.plan-input{
+width:100%;
+padding:14px;
+border:1px solid #efc6d6;
+border-radius:14px;
+font-size:16px;
+margin-top:7px;
+outline:none;
+font-family:Arial,sans-serif;
+}
+
+.plan-input:focus{
+border-color:#df78a5;
 }
 
 .options{
@@ -165,10 +243,6 @@ text-align:left;
 cursor:pointer;
 }
 
-.option:hover{
-background:#fff0f6;
-}
-
 .answer{
 display:none;
 background:#fff0f6;
@@ -180,32 +254,6 @@ line-height:1.7;
 
 .option.open .answer{
 display:block;
-}
-
-.letter{
-width:100%;
-background:#fff;
-border-radius:22px;
-padding:23px;
-text-align:left;
-line-height:2;
-font-size:16px;
-border:1px solid #f2cbd9;
-}
-
-.plan-input{
-width:100%;
-padding:14px;
-border:1px solid #efc6d6;
-border-radius:14px;
-font-size:16px;
-margin-top:8px;
-outline:none;
-font-family:Arial,sans-serif;
-}
-
-.plan-input:focus{
-border-color:#df78a5;
 }
 
 .final{
@@ -259,6 +307,7 @@ vertical-align:middle;
 
 <div class="container">
 
+
 <!-- HOME -->
 
 <section id="home" class="page active">
@@ -274,13 +323,13 @@ Arwa ♡
 
 <p>
 I miss you.<br>
-I wanted to make something with my own hands
-to show you how much I love you —
-even if it's something small like this.
+And since I can't be there with you today,
+I wanted to make something with my own hands —
+something small, but made especially for you.
 </p>
 
 <button class="main-btn" onclick="showPage('gifts')">
-Open Your Surprise 🎁
+Open Your Little Surprise 🎁
 </button>
 
 </section>
@@ -300,9 +349,9 @@ Pick whichever one you want first 👀
 
 <div class="gifts">
 
-<button class="gift" onclick="showPage('story')">
+<button class="gift" onclick="showPage('openwhen')">
 <span class="gift-icon">🎀</span>
-Our Little Story
+Open When...
 </button>
 
 <button class="gift" onclick="showPage('things')">
@@ -312,62 +361,123 @@ Things I Love About You
 
 <button class="gift" onclick="showPage('plans')">
 <span class="gift-icon">✈️</span>
-Our Little Plans
+When We're Together
 </button>
 
 </div>
 
-<p style="margin-top:30px;color:#b47792;font-size:14px;">
+<p style="margin-top:28px;color:#b47792;font-size:14px;">
 And there is one last thing waiting for you... 💌
 </p>
 
 </section>
 
 
-<!-- STORY -->
+<!-- OPEN WHEN -->
 
-<section id="story" class="page">
+<section id="openwhen" class="page">
 
 <div class="small">Gift No. 1</div>
 
-<h2>Three Months... Really? 😂</h2>
-
-<div class="story">
-
-<div class="story-item">
-<strong>It actually started way before this.</strong><br>
-There was a whole part of our story where we weren't even talking anymore.
-We had lost touch for a long time, even though you already knew how you felt about me.
-</div>
-
-<div class="story-item">
-<strong>And then there was December 2024.</strong><br>
-That's when you realized your feelings for me.
-I just didn't understand what was happening between us at the time.
-</div>
-
-<div class="story-item">
-<strong>Then, three months ago, I reached out.</strong><br>
-I finally came back and told you how I felt too.
-And somehow, after all that time apart, we found our way back to each other.
-</div>
-
-<div class="story-item">
-<strong>The truth is...</strong><br>
-I was surprised, and I needed time.
-I was going through a difficult period, scared of relationships,
-and honestly afraid to even understand my own feelings.
-</div>
-
-</div>
+<h2>Open When... 🎀</h2>
 
 <p>
-Maybe our relationship is only three months old...
-<br>
-but our story definitely isn't.
-<br><br>
-And I'm really glad I finally found my way back to you. ❤️
+A few little messages from me,
+for whenever you need them.
 </p>
+
+<div class="open-when">
+
+<button class="open-card" onclick="this.classList.toggle('open')">
+💗 Open when you miss me
+
+<div class="open-message">
+I know you miss me sometimes...
+because I miss you too. Probably more than I tell you.
+
+I wish I could just be there, sit next to you,
+annoy you a little, and make you smile. 😂
+
+Until then, just know that you're always somewhere in my mind.
+</div>
+</button>
+
+
+<button class="open-card" onclick="this.classList.toggle('open')">
+🥺 Open when you're having a bad day
+
+<div class="open-message">
+I wish I could be there today.
+
+I know I can't fix everything,
+but if I were there, I'd probably just stay beside you
+until the day feels a little easier.
+
+Whatever is bothering you,
+don't let one bad day convince you that everything is bad.
+
+Tomorrow is another day. ❤️
+</div>
+</button>
+
+
+<button class="open-card" onclick="this.classList.toggle('open')">
+😂 Open when you need a smile
+
+<div class="open-message">
+I don't really have to say much here.
+
+Just remember that you chose to love me...
+so technically, you brought this on yourself. 😂❤️
+
+Now smile.
+
+That's an order.
+</div>
+</button>
+
+
+<button class="open-card" onclick="this.classList.toggle('open')">
+🌙 Open when you can't sleep
+
+<div class="open-message">
+It's probably late,
+and you're still awake for absolutely no reason. 😂
+
+So here's your reminder that somewhere far away,
+there's someone who would probably stay up talking to you
+until you finally fell asleep.
+
+I hope you sleep with a smile tonight. ❤️
+</div>
+</button>
+
+
+<button class="open-card" onclick="this.classList.toggle('open')">
+🔒 Open this one last
+
+<div class="open-message">
+If you're ever wondering how I really feel about you,
+don't overthink it.
+
+I love you.
+
+I love the way you care,
+the way you think,
+your eyes,
+your heart,
+and the way you somehow make being with you feel so easy.
+
+I don't know exactly when it happened,
+or how you managed to get this far into my head... 😂
+
+I just know that I don't want you to be a temporary part of my life.
+
+I want you to be there for the things that are still ahead of us. ❤️
+</div>
+</button>
+
+</div>
 
 <button class="back" onclick="showPage('gifts')">
 ← Back to gifts
@@ -388,16 +498,23 @@ And I'm really glad I finally found my way back to you. ❤️
 
 <div class="options">
 
+
 <button class="option" onclick="this.classList.toggle('open')">
 💗 Your attention
 
 <div class="answer">
-One of the things I'll never forget is how you care about me.
-You used to make donations to charities whenever you felt I wasn't doing well,
-and pray for me just because you wanted me to be okay.
-That kind of love means more to me than you probably realize.
-</div>
+I used to be genuinely surprised that someone would do something like that for me.
 
+Whenever you felt that I wasn't doing well,
+you'd make donations to charities and pray for me,
+just hoping I'd be okay.
+
+It might have seemed like a small thing to you,
+but it really did make a difference to me.
+
+I noticed it.
+And I still remember it.
+</div>
 </button>
 
 
@@ -405,63 +522,78 @@ That kind of love means more to me than you probably realize.
 👀 Your beautiful eyes
 
 <div class="answer">
-I love your eyes.
-I don't even have a complicated explanation for it. 😂❤️
-I just do.
-</div>
+I really, really love your eyes.
 
+That's it.
+That's the whole explanation. 😂❤️
+</div>
 </button>
 
 
 <button class="option" onclick="this.classList.toggle('open')">
-🧠 The way you think
+🧠 Your mind
 
 <div class="answer">
 I love how smart and mature you are.
-You're different in a way that's hard for me to explain.
-You have your own mind, your own way of looking at things,
-and there's always something real going on inside your head.
-</div>
 
+I love the way you think,
+the way you see things,
+and the fact that you never feel empty or shallow.
+
+There's always something real going on in your head.
+</div>
 </button>
 
 
 <button class="option" onclick="this.classList.toggle('open')">
-🌷 The way you feel
+🌷 Your softness
 
 <div class="answer">
-You're light.
-You're sweet.
-And somehow, you're just easy on the heart.
-I don't really know how to explain that feeling...
-I just feel it whenever I'm with you.
-</div>
+There's just something about you.
 
+You're light,
+you're sweet,
+and somehow you're just easy on the heart.
+
+It's more of a feeling than something I know how to explain.
+</div>
 </button>
 
 
 <button class="option" onclick="this.classList.toggle('open')">
-✨ The way you love me
+😂 The fact that you still love me
 
 <div class="answer">
-The fact that you love me as I am is already enough.
-You don't need me to be someone else.
-And knowing that I can just be myself with you means more than I can say.
-</div>
+You know me.
 
+You know my good sides,
+but unfortunately... you also know most of the bad ones. 😂
+
+And somehow, you still haven't run away.
+
+You had your chance.
+
+And yet you're still here...
+and I'm still holding on to you. ❤️
+</div>
 </button>
 
 
 <button class="option" onclick="this.classList.toggle('open')">
-❤️ The way you make me feel
+❤️ The way you love me
 
 <div class="answer">
-I feel comfortable with you.
-I don't feel like I have to pretend or overthink every little thing.
-I can just be me.
-And honestly, that's one of my favorite things about us.
-</div>
+You know me exactly as I am.
 
+You know my flaws,
+my weird sides,
+my overthinking,
+all of it...
+
+and you still chose to love me.
+
+I don't think I could ask for much more than that.
+</div>
 </button>
 
 </div>
@@ -477,62 +609,64 @@ And honestly, that's one of my favorite things about us.
 
 <section id="plans" class="page">
 
-<div class="small">A little something for later</div>
+<div class="small">Gift No. 3</div>
 
-<h2>When I'm Back ✈️</h2>
+<h2>When We're Together ✈️</h2>
 
 <p>
-I don't really care where we go.
+I've been choosing everything for this little surprise...
 <br>
-I just want to spend time with you.
+so I think it's your turn now. ❤️
 </p>
 
-<div class="letter">
+<div class="plan-box">
 
 <strong>
-So... you get to decide.
+When we're finally together, you choose.
 </strong>
 
-<br><br>
-
-The place.<br>
-The movie.<br>
-The food.<br>
-The night.<br>
-The whole plan. 😂❤️
-
-<br><br>
-
-<label>
-<strong>What do you want us to do?</strong>
-</label>
+<label>Where are we going?</label>
 
 <input
-id="plan"
+id="place"
 class="plan-input"
 placeholder="Your choice...">
 
-<br><br>
-
-<label>
-<strong>And what else do you want?</strong>
-</label>
+<label>What are we watching?</label>
 
 <input
-id="wish"
+id="movie"
+class="plan-input"
+placeholder="Your choice...">
+
+<label>What are we doing after?</label>
+
+<input
+id="after"
+class="plan-input"
+placeholder="Your choice...">
+
+<label>Anything else you want?</label>
+
+<input
+id="extra"
 class="plan-input"
 placeholder="Anything you want...">
 
-<br><br>
+<br>
 
-<small style="color:#b47792;">
-This list is yours. I'm just waiting to make it happen.
-</small>
+<p style="font-size:14px;color:#b47792;">
+I don't care where we go,
+what movie we watch,
+or what we end up doing.
+
+I just want the night with you. ❤️
+</p>
 
 </div>
 
 <button class="main-btn" onclick="savePlan()">
-Save Our List ❤️
+Deal? 🤝
 </button>
 
 <button class="back" onclick="showPage('gifts')">
@@ -548,7 +682,7 @@ Save Our List ❤️
 
 <div class="cake">🥹❤️</div>
 
-<div class="small">Okay, it's official</div>
+<div class="small">Our little plan</div>
 
 <h2>It's A Deal.</h2>
 
@@ -579,19 +713,29 @@ I love you.
 
 <br><br>
 
-And honestly, I'm sorry for all the time I wasted before you.
+And honestly, one of the things I regret the most
+is all the time I spent without you.
 
 <br><br>
 
-I'm sorry I didn't make the most of those college days,
-when I could have seen you every day and gotten closer to you.
+I think about those college days sometimes
+and wish I had used that time better.
 
-I'm sorry that after we graduated,
+I wish I had spent more time with you,
+seen you more often,
+and actually allowed myself to get closer to you
+instead of pushing everything away.
+
+<br><br>
+
+I'm also sorry that after we graduated,
 we somehow let all that time pass without talking.
 
 And more than anything,
 I'm sorry that I wasn't there for you during some of the hardest times you went through.
-I know that, in some way, I was even part of that difficult time.
+
+I know that, in some way,
+I was even part of that difficult time.
 
 <br><br>
 
@@ -606,37 +750,53 @@ What I can do is make sure we don't waste what comes next.
 
 I want to make up for all of it with you.
 
-I want us to have our own life together.
-I want us to travel,
-stay up late talking about absolutely nothing,
-go out at night,
-walk around with no real plan,
-and do all the little things you've always wanted to do.
-
+I want to live with you.
 I want to wake up and find you next to me.
-I want to randomly bring you something you love.
-I want the ordinary days with you just as much as the big ones.
+
+I want random walks at night,
+bringing you something you love for no reason,
+staying up late together,
+traveling,
+laughing,
+and doing all the simple things
+that somehow become special when they're with the right person.
 
 <br><br>
 
-Maybe we're only three months in,
-but I already know there's so much more I want to experience with you.
+I don't have one perfect reason for loving you.
+
+I love you because of all of it.
+
+Your mind.
+Your heart.
+Your eyes.
+Your attention.
+The way you love me.
+The way you understand me.
 
 <br><br>
 
-And I need you to know something:
+Even the parts of you that you think are difficult.
 
-I love you.
-I'm completely gone for you. 😂❤️
-
-And no matter how long it takes,
-I'll get there.
-We'll have our time.
-We'll make up for everything we missed.
+I just love you as you are.
 
 <br><br>
 
-I promise.
+And I know you already know
+my mind isn't always the easiest place to live. 😂
+
+But I'm here now.
+
+And I'm not planning on going anywhere.
+
+<br><br>
+
+Whatever time we lost before,
+we'll make it up in our own way.
+
+<br><br>
+
+I love you, Arwa. ❤️
 
 </div>
 
@@ -663,42 +823,30 @@ One Last Thing...
 
 <p class="final">
 
-I know you probably wouldn't want me to send you
-a material gift right now,
+I know you probably wouldn't want me
+to send you a material gift right now,
 and I completely understand that.
 
 <br><br>
 
 So for now,
-this is the least I can give you from here —
-something I made with my own hands
+this is the least I could do from here —
+something I made with my own hands,
 just to remind you how much I love you.
 
 <br><br>
 
-And I need you to know...
-
-you are always, always on my mind.
-
-You're always missed.
-Every day.
+You're always, always on my mind.
 
 <br><br>
 
-And somehow,
-I've become completely obsessed with you. 😂❤️
-
-<br><br>
-
-So... enjoy your birthday.
-
-And I hope one day soon,
-I won't have to celebrate it from another country.
+And honestly...
+I've become a little obsessed with you. 😂❤️
 
 <br><br>
 
 <strong>
-Until then, this is my little piece of me with you.
+So... enjoy your birthday, Arwa. ❤️
 </strong>
 
 </p>
@@ -708,6 +856,7 @@ Happy Birthday, Arwa ❤️
 </button>
 
 </section>
+
 
 </div>
 
@@ -732,19 +881,24 @@ behavior:'smooth'
 
 function savePlan(){
 
-let plan=document.getElementById('plan').value.trim();
-let wish=document.getElementById('wish').value.trim();
-
-let first=plan || "Whatever you choose";
-let second=wish || "Whatever else you want";
+let place=document.getElementById('place').value.trim();
+let movie=document.getElementById('movie').value.trim();
+let after=document.getElementById('after').value.trim();
+let extra=document.getElementById('extra').value.trim();
 
 document.getElementById('savedText').innerHTML=
-"Alright... it's officially a plan. ❤️<br><br>"+
-"<strong>"+escapeHTML(first)+"</strong>"+
-"<br><br>"+
-escapeHTML(second)+
-"<br><br>"+
-"I'll be holding you to this when I'm back. 😌";
+
+"<strong>Our plan:</strong><br><br>"+
+
+"📍 "+escapeHTML(place || "Wherever you choose")+"<br><br>"+
+
+"🎬 "+escapeHTML(movie || "Whatever you want to watch")+"<br><br>"+
+
+"🌙 "+escapeHTML(after || "Whatever we feel like doing")+"<br><br>"+
+
+"❤️ "+escapeHTML(extra || "And anything else you want.")+
+
+"<br><br>I'm holding you to this when we're together. 😌";
 
 showPage('saved');
 
@@ -765,7 +919,7 @@ return text
 
 function celebrate(){
 
-for(let i=0;i<50;i++){
+for(let i=0;i<60;i++){
 
 let heart=document.createElement('div');
 
@@ -777,7 +931,7 @@ heart.style.left=Math.random()*100+'vw';
 heart.style.top='-30px';
 heart.style.fontSize=(16+Math.random()*24)+'px';
 heart.style.zIndex='999';
-heart.style.transition='top 2.5s linear, opacity 2.5s';
+heart.style.transition='top 2.5s linear,opacity 2.5s';
 
 document.body.appendChild(heart);
 
