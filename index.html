@@ -1,283 +1,537 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Arwa ❤️</title>
+<title>Happy Birthday, Arwa ♡</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
-margin:0;
-font-family:Arial,Tahoma,sans-serif;
-background:linear-gradient(135deg,#f7a4c5,#ffdce9);
-color:#8b5270;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#f7a5c6,#ffe0eb);
+  color:#8b526f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow-x:hidden;
 }
 
-.box{
-width:92%;
-max-width:600px;
-background:#fff9fc;
-border-radius:30px;
-padding:35px 22px;
-text-align:center;
-box-shadow:0 20px 50px #a8557840;
+.container{
+  width:92%;
+  max-width:650px;
+  min-height:650px;
+  background:rgba(255,250,252,.96);
+  border-radius:32px;
+  padding:30px 22px;
+  box-shadow:0 25px 70px rgba(120,50,80,.25);
+  text-align:center;
+  position:relative;
 }
 
-h1{
-font-size:48px;
-color:#e66f9f;
-margin:15px 0;
+.page{
+  display:none;
+  min-height:590px;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
-h2{
-color:#e66f9f;
+.page.active{
+  display:flex;
 }
 
 .cake{
-font-size:75px;
+  font-size:75px;
+  animation:float 2s ease-in-out infinite;
 }
 
-button{
-border:0;
-background:#ed82ad;
-color:white;
-padding:15px 25px;
-border-radius:30px;
-font-size:16px;
-margin:8px;
-cursor:pointer;
+@keyframes float{
+  50%{transform:translateY(-10px)}
+}
+
+.small{
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  color:#b47792;
+}
+
+h1{
+  font-size:clamp(40px,11vw,70px);
+  line-height:.95;
+  color:#e66e9e;
+  margin:18px 0;
+}
+
+h2{
+  font-size:clamp(28px,8vw,45px);
+  color:#e66e9e;
+  margin:10px 0 20px;
+}
+
+p{
+  font-size:17px;
+  line-height:1.8;
+}
+
+.main-btn{
+  border:0;
+  background:#eb80ad;
+  color:white;
+  padding:15px 28px;
+  border-radius:50px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:18px;
+  box-shadow:0 8px 20px rgba(190,80,125,.2);
+  transition:.25s;
+}
+
+.main-btn:hover{
+  transform:translateY(-3px);
 }
 
 .gifts{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  width:100%;
+  margin-top:25px;
 }
 
 .gift{
-height:150px;
-font-size:18px;
+  height:175px;
+  border:0;
+  border-radius:24px;
+  background:#f3a0c1;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 12px 25px rgba(160,70,110,.2);
+  transition:.3s;
+  font-size:16px;
 }
 
-.gift span{
-display:block;
-font-size:55px;
-margin-bottom:10px;
+.gift:hover{
+  transform:translateY(-8px) rotate(-2deg);
 }
 
-.page{display:none}
-.active{display:block}
+.gift:nth-child(2):hover{
+  transform:translateY(-8px) rotate(2deg);
+}
+
+.gift-icon{
+  display:block;
+  font-size:60px;
+  margin-bottom:12px;
+}
+
+.story{
+  width:100%;
+  text-align:left;
+  margin-top:10px;
+}
+
+.story-item{
+  background:white;
+  border-radius:18px;
+  padding:15px 18px;
+  margin:10px 0;
+  line-height:1.7;
+  border:1px solid #f4d0de;
+}
+
+.story-item strong{
+  color:#e16e9c;
+}
+
+.options{
+  width:100%;
+}
 
 .option{
-background:white;
-border:1px solid #f1c6d6;
-color:#8b5270;
-width:100%;
-border-radius:18px;
-margin:7px 0;
-padding:15px;
+  width:100%;
+  border:1px solid #f1c9d8;
+  background:white;
+  color:#87516c;
+  border-radius:18px;
+  padding:16px;
+  margin:6px 0;
+  font-size:15px;
+  text-align:left;
+  cursor:pointer;
+}
+
+.option:hover{
+  background:#fff0f6;
 }
 
 .answer{
-display:none;
-background:#fff0f6;
-padding:12px;
-border-radius:12px;
-margin-top:8px;
+  display:none;
+  background:#fff0f6;
+  border-radius:13px;
+  padding:12px;
+  margin-top:9px;
+  line-height:1.7;
 }
 
-.open .answer{
-display:block;
+.option.open .answer{
+  display:block;
 }
 
 .letter{
-background:white;
-padding:22px;
-border-radius:20px;
-line-height:2;
-text-align:right;
+  width:100%;
+  background:white;
+  border-radius:22px;
+  padding:23px;
+  text-align:left;
+  line-height:2;
+  font-size:16px;
+  border:1px solid #f4d0de;
 }
 
+.final{
+  font-size:18px;
+  color:#e16e9c;
+  line-height:1.8;
+}
+
+.back{
+  margin-top:18px;
+  background:transparent;
+  border:0;
+  color:#c56b91;
+  cursor:pointer;
+  font-size:14px;
+}
+
+@media(max-width:600px){
+  .container{
+    min-height:100vh;
+    width:100%;
+    border-radius:0;
+    padding:25px 18px;
+  }
+
+  .page{
+    min-height:90vh;
+  }
+
+  .gifts{
+    grid-template-columns:1fr;
+  }
+
+  .gift{
+    height:105px;
+  }
+
+  .gift-icon{
+    display:inline-block;
+    font-size:42px;
+    margin:0 10px 0 0;
+    vertical-align:middle;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<div id="home" class="page active">
+<!-- HOME -->
+<section id="home" class="page active">
 
 <div class="cake">🎂</div>
 
-<h1>Happy Birthday<br>Arwa ❤️</h1>
+<div class="small">September 3, 2026</div>
+
+<h1>
+Happy Birthday<br>
+Arwa ♡
+</h1>
 
 <p>
-بما إني بعيد ومش هقدر أكون معاكي النهارده،
-<br>
-قلت أعملك حاجة صغيرة مخصوص ليكي.
+I couldn't be there with you today...<br>
+so I made you a little something instead.
 </p>
 
-<button onclick="page('gifts')">
-افتحي المفاجأة 🎁
+<button class="main-btn" onclick="showPage('gifts')">
+Open Your Surprise 🎁
 </button>
 
-</div>
+</section>
 
 
-<div id="gifts" class="page">
+<!-- GIFTS -->
+<section id="gifts" class="page">
 
-<h2>اختاري هدية 🎁</h2>
+<div class="small">A little something for you</div>
 
-<p>مفيش ترتيب صح 😂</p>
+<h2>Choose a Gift 🎁</h2>
+
+<p>
+No wrong choice... but the last one is special 👀
+</p>
 
 <div class="gifts">
 
-<button class="gift" onclick="page('story')">
-<span>🎀</span>
-الهدية الأولى
+<button class="gift" onclick="showPage('story')">
+<span class="gift-icon">🎀</span>
+Our Little Story
 </button>
 
-<button class="gift" onclick="page('choose')">
-<span>💗</span>
-الهدية الثانية
+<button class="gift" onclick="showPage('things')">
+<span class="gift-icon">💗</span>
+Things I Love About You
 </button>
 
-<button class="gift" onclick="page('letter')">
-<span>💌</span>
-الهدية الأخيرة
+<button class="gift" onclick="showPage('letter')">
+<span class="gift-icon">💌</span>
+A Letter For You
 </button>
 
 </div>
 
+</section>
+
+
+<!-- STORY -->
+<section id="story" class="page">
+
+<div class="small">Gift No. 1</div>
+
+<h2>Three Months... Really? 😂</h2>
+
+<div class="story">
+
+<div class="story-item">
+<strong>Before the three months...</strong><br>
+Our story had already started long before we officially became "us."
 </div>
 
+<div class="story-item">
+<strong>The funny part...</strong><br>
+You already had feelings for me... and I was just taking my time to figure everything out. 😂
+</div>
 
-<div id="story" class="page">
+<div class="story-item">
+<strong>Then I finally knew.</strong><br>
+Three months ago, I realized what was right in front of me — and I'm really glad I did.
+</div>
 
-<h2>3 شهور بس؟ 😂</h2>
+</div>
 
 <p>
-الحقيقة إن الحكاية بدأت قبل التلات شهور دول بكتير.
+Maybe three months isn't a long time...<br>
+but somehow, you already feel like someone I've known for much longer. ❤️
 </p>
 
-<p>
-[اكتب هنا حكايتكم قبل الاعتراف]
-</p>
-
-<p>
-[اكتب هنا موقف الاعتراف]
-</p>
-
-<p>
-[اكتب هنا حاجة بتحبها في أول 3 شهور]
-</p>
-
-<button onclick="page('gifts')">
-رجوع 🎁
+<button class="back" onclick="showPage('gifts')">
+← Back to gifts
 </button>
 
-</div>
+</section>
 
 
-<div id="choose" class="page">
+<!-- THINGS -->
+<section id="things" class="page">
 
-<h2>اختاري واحدة 👀</h2>
+<div class="small">Gift No. 2</div>
+
+<h2>Things I Love About You 💗</h2>
+
+<p>Tap each one...</p>
+
+<div class="options">
 
 <button class="option" onclick="this.classList.toggle('open')">
-حاجة بحبها فيكي
+💗 Your attention
 <div class="answer">
-[اكتب السبب هنا]
+I love how you care about the little things and somehow always make me feel that I'm on your mind.
 </div>
 </button>
 
 <button class="option" onclick="this.classList.toggle('open')">
-حاجة بتضحكني فيكي
+👀 Your beautiful eyes
 <div class="answer">
-[اكتب الموقف هنا]
+Honestly... I don't think I need to explain this one. 😂❤️
 </div>
 </button>
 
 <button class="option" onclick="this.classList.toggle('open')">
-حاجة نفسي أعملها معاكي
+🧠 The way you think
 <div class="answer">
-[اكتب الحاجة اللي مستني تعملوها لما تنزل]
+I love your mind, the way you look at things, and the way you have your own way of seeing the world.
 </div>
 </button>
 
 <button class="option" onclick="this.classList.toggle('open')">
-حاجة مستنيها لما أنزل
+🌷 Your softness
 <div class="answer">
-[اكتب هنا]
+There's something light and sweet about you that makes being around you feel easy.
 </div>
 </button>
 
 <button class="option" onclick="this.classList.toggle('open')">
-حاجة نفسي أقولهالك من زمان
+✨ The little things you do
 <div class="answer">
-[اكتب كلامك هنا]
+Sometimes it's the smallest things you probably don't even notice that stay in my head the most.
 </div>
 </button>
 
-<br>
-
-<button onclick="page('gifts')">
-رجوع 🎁
+<button class="option" onclick="this.classList.toggle('open')">
+❤️ The way you make me feel
+<div class="answer">
+I just like being yours. That's probably the simplest way I can say it.
+</div>
 </button>
 
 </div>
 
+<button class="back" onclick="showPage('gifts')">
+← Back to gifts
+</button>
 
-<div id="letter" class="page">
+</section>
 
-<div class="cake">💌</div>
 
-<h2>آخر هدية</h2>
+<!-- LETTER -->
+<section id="letter" class="page">
+
+<div class="small">The last gift</div>
+
+<h2>A Letter For You 💌</h2>
 
 <div class="letter">
 
-أروى،
+Arwa,
 
-[اكتب رسالتك هنا بطريقتك أنت.]
+I love you.
 
-عارف إننا بقالنا 3 شهور 😂
-بس الحقيقة إننا ما بدأناش من 3 شهور بس.
+And honestly, I'm sorry for all the time I wasted before you.
 
-عيد ميلاد سعيد يا أروى ❤️
+You know how my mind works, and you know that sometimes I take my time to realize things... but I'm really glad I finally did.
 
-وأيوه، أنا بعيد ومش هعرف أديكي حاجة بإيدي النهارده،
-بس أول ما أنزل لسه ليا معاكي عيد ميلاد متأخر 😌
+I don't want to waste any more time.
 
-[اكتب خاتمتك هنا]
+I want us to make up for all those missed moments.
+
+I want us to have our own life together, travel, stay up late talking about absolutely nothing, laugh until we can't breathe, and do all the little things you've always wished for.
+
+I want to see you happy, and I want to be there for the moments that make you happy.
+
+Maybe we're only three months in, but I already know there's so much more I want to experience with you.
+
+And I promise you... we'll make up for the time we lost. ❤️
 
 </div>
 
-<button onclick="page('gifts')">
-رجوع 🎁
+<button class="main-btn" onclick="showPage('final')">
+One Last Thing...
 </button>
 
-</div>
+<button class="back" onclick="showPage('gifts')">
+← Back to gifts
+</button>
+
+</section>
+
+
+<!-- FINAL -->
+<section id="final" class="page">
+
+<div class="cake">❤️</div>
+
+<div class="small">One last thing...</div>
+
+<h2>About Your Gift</h2>
+
+<p class="final">
+
+I know a real gift isn't really what you want right now,
+and I completely understand.
+
+<br><br>
+
+So for now, let this be my little birthday gift to you.
+
+<br><br>
+
+And when we're finally together,
+I'll make up for this one properly.
+
+<br>
+
+<strong>And hopefully, it'll be much better. ❤️</strong>
+
+</p>
+
+<p>
+Happy Birthday, Arwa. 🎂
+</p>
+
+<button class="main-btn" onclick="celebrate()">
+♡
+</button>
+
+</section>
 
 </div>
 
 
 <script>
 
-function page(id){
+function showPage(id){
 
-document.querySelectorAll('.page')
-.forEach(x=>x.classList.remove('active'));
+document.querySelectorAll('.page').forEach(function(page){
+page.classList.remove('active');
+});
 
-document.getElementById(id)
-.classList.add('active');
+document.getElementById(id).classList.add('active');
 
-window.scrollTo(0,0);
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+}
+
+function celebrate(){
+
+document.body.style.background=
+"linear-gradient(135deg,#f3a0c1,#ffe5ef)";
+
+for(let i=0;i<35;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top="-30px";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+heart.style.zIndex="999";
+heart.style.transition="top 2.5s linear, opacity 2.5s";
+
+document.body.appendChild(heart);
+
+setTimeout(function(){
+heart.style.top="110vh";
+heart.style.opacity="0";
+},50);
+
+setTimeout(function(){
+heart.remove();
+},2700);
+
+}
 
 }
 
