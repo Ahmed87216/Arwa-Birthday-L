@@ -271,6 +271,24 @@ cursor:pointer;
 font-size:14px;
 }
 
+/* MUSIC BUTTON */
+
+.music-control{
+position:fixed;
+right:18px;
+bottom:18px;
+width:48px;
+height:48px;
+border:0;
+border-radius:50%;
+background:#df78a5;
+color:white;
+font-size:20px;
+cursor:pointer;
+box-shadow:0 8px 20px rgba(120,50,80,.2);
+z-index:1000;
+}
+
 @media(max-width:600px){
 
 .container{
@@ -305,6 +323,17 @@ vertical-align:middle;
 
 <body>
 
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+<source src="Albumaty.Com__ant_hbyby.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-control" onclick="toggleMusic()">
+♫
+</button>
+
+
 <div class="container">
 
 
@@ -328,7 +357,7 @@ I wanted to make something with my own hands —
 something small, but made especially for you.
 </p>
 
-<button class="main-btn" onclick="showPage('gifts')">
+<button class="main-btn" onclick="startMusic()">
 Open Your Little Surprise 🎁
 </button>
 
@@ -862,6 +891,52 @@ behavior:'smooth'
 }
 
 
+/* MUSIC */
+
+function startMusic(){
+
+const music=document.getElementById('bgMusic');
+
+music.volume=0.35;
+
+music.play().catch(function(error){
+console.log("Music could not start:",error);
+});
+
+document.getElementById('musicButton').textContent='🔊';
+
+showPage('gifts');
+
+}
+
+
+function toggleMusic(){
+
+const music=document.getElementById('bgMusic');
+
+const button=document.getElementById('musicButton');
+
+if(music.paused){
+
+music.volume=0.35;
+
+music.play().catch(function(error){
+console.log("Music could not start:",error);
+});
+
+button.textContent='🔊';
+
+}else{
+
+music.pause();
+
+button.textContent='♫';
+
+}
+
+}
+
+
 function savePlan(){
 
 let place=document.getElementById('place').value.trim();
@@ -910,10 +985,15 @@ heart.textContent=
 ['❤️','💗','💕','✨','💖'][Math.floor(Math.random()*5)];
 
 heart.style.position='fixed';
+
 heart.style.left=Math.random()*100+'vw';
+
 heart.style.top='-30px';
+
 heart.style.fontSize=(16+Math.random()*24)+'px';
+
 heart.style.zIndex='999';
+
 heart.style.transition='top 2.5s linear,opacity 2.5s';
 
 document.body.appendChild(heart);
@@ -921,6 +1001,7 @@ document.body.appendChild(heart);
 setTimeout(function(){
 
 heart.style.top='110vh';
+
 heart.style.opacity='0';
 
 },50);
