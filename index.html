@@ -6,236 +6,251 @@
 <title>Happy Birthday, Arwa ♡</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  min-height:100vh;
-  font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,#f7a5c6,#ffe0eb);
-  color:#8b526f;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow-x:hidden;
+margin:0;
+min-height:100vh;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#f7a5c6,#ffe0eb);
+color:#87516c;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow-x:hidden;
 }
 
 .container{
-  width:92%;
-  max-width:650px;
-  min-height:650px;
-  background:rgba(255,250,252,.96);
-  border-radius:32px;
-  padding:30px 22px;
-  box-shadow:0 25px 70px rgba(120,50,80,.25);
-  text-align:center;
-  position:relative;
+width:92%;
+max-width:650px;
+min-height:650px;
+background:rgba(255,250,252,.97);
+border-radius:32px;
+padding:30px 22px;
+box-shadow:0 25px 70px rgba(120,50,80,.22);
+text-align:center;
+position:relative;
 }
 
 .page{
-  display:none;
-  min-height:590px;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+display:none;
+min-height:590px;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
 .page.active{
-  display:flex;
+display:flex;
 }
 
 .cake{
-  font-size:75px;
-  animation:float 2s ease-in-out infinite;
+font-size:75px;
+animation:float 2s ease-in-out infinite;
 }
 
 @keyframes float{
-  50%{transform:translateY(-10px)}
+50%{transform:translateY(-9px)}
 }
 
 .small{
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:11px;
-  color:#b47792;
+text-transform:uppercase;
+letter-spacing:4px;
+font-size:11px;
+color:#b47792;
 }
 
 h1{
-  font-size:clamp(40px,11vw,70px);
-  line-height:.95;
-  color:#e66e9e;
-  margin:18px 0;
+font-size:clamp(40px,11vw,70px);
+line-height:.95;
+color:#d66b99;
+margin:18px 0;
 }
 
 h2{
-  font-size:clamp(28px,8vw,45px);
-  color:#e66e9e;
-  margin:10px 0 20px;
+font-size:clamp(28px,8vw,45px);
+color:#d66b99;
+margin:10px 0 20px;
 }
 
 p{
-  font-size:17px;
-  line-height:1.8;
+font-size:17px;
+line-height:1.8;
 }
 
 .main-btn{
-  border:0;
-  background:#eb80ad;
-  color:white;
-  padding:15px 28px;
-  border-radius:50px;
-  font-size:16px;
-  cursor:pointer;
-  margin-top:18px;
-  box-shadow:0 8px 20px rgba(190,80,125,.2);
-  transition:.25s;
+border:0;
+background:#df78a5;
+color:#fff;
+padding:15px 28px;
+border-radius:50px;
+font-size:16px;
+cursor:pointer;
+margin-top:18px;
+box-shadow:0 10px 25px rgba(190,80,125,.18);
+transition:.25s;
 }
 
 .main-btn:hover{
-  transform:translateY(-3px);
+transform:translateY(-3px);
 }
 
 .gifts{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  width:100%;
-  margin-top:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+width:100%;
+margin-top:25px;
 }
 
 .gift{
-  height:175px;
-  border:0;
-  border-radius:24px;
-  background:#f3a0c1;
-  color:white;
-  cursor:pointer;
-  box-shadow:0 12px 25px rgba(160,70,110,.2);
-  transition:.3s;
-  font-size:16px;
+height:175px;
+border:0;
+border-radius:24px;
+background:#ed92b5;
+color:#fff;
+cursor:pointer;
+box-shadow:0 12px 25px rgba(160,70,110,.18);
+transition:.3s;
+font-size:16px;
 }
 
 .gift:hover{
-  transform:translateY(-8px) rotate(-2deg);
+transform:translateY(-8px) rotate(-2deg);
 }
 
 .gift:nth-child(2):hover{
-  transform:translateY(-8px) rotate(2deg);
+transform:translateY(-8px) rotate(2deg);
 }
 
 .gift-icon{
-  display:block;
-  font-size:60px;
-  margin-bottom:12px;
+display:block;
+font-size:60px;
+margin-bottom:12px;
 }
 
 .story{
-  width:100%;
-  text-align:left;
-  margin-top:10px;
+width:100%;
+text-align:left;
+margin-top:10px;
 }
 
 .story-item{
-  background:white;
-  border-radius:18px;
-  padding:15px 18px;
-  margin:10px 0;
-  line-height:1.7;
-  border:1px solid #f4d0de;
+background:#fff;
+border-radius:18px;
+padding:16px 18px;
+margin:10px 0;
+line-height:1.75;
+border:1px solid #f2cbd9;
 }
 
 .story-item strong{
-  color:#e16e9c;
+color:#d66b99;
 }
 
 .options{
-  width:100%;
+width:100%;
 }
 
 .option{
-  width:100%;
-  border:1px solid #f1c9d8;
-  background:white;
-  color:#87516c;
-  border-radius:18px;
-  padding:16px;
-  margin:6px 0;
-  font-size:15px;
-  text-align:left;
-  cursor:pointer;
+width:100%;
+border:1px solid #efc6d6;
+background:#fff;
+color:#87516c;
+border-radius:18px;
+padding:16px;
+margin:6px 0;
+font-size:15px;
+text-align:left;
+cursor:pointer;
 }
 
 .option:hover{
-  background:#fff0f6;
+background:#fff0f6;
 }
 
 .answer{
-  display:none;
-  background:#fff0f6;
-  border-radius:13px;
-  padding:12px;
-  margin-top:9px;
-  line-height:1.7;
+display:none;
+background:#fff0f6;
+border-radius:13px;
+padding:12px;
+margin-top:9px;
+line-height:1.7;
 }
 
 .option.open .answer{
-  display:block;
+display:block;
 }
 
 .letter{
-  width:100%;
-  background:white;
-  border-radius:22px;
-  padding:23px;
-  text-align:left;
-  line-height:2;
-  font-size:16px;
-  border:1px solid #f4d0de;
+width:100%;
+background:#fff;
+border-radius:22px;
+padding:23px;
+text-align:left;
+line-height:2;
+font-size:16px;
+border:1px solid #f2cbd9;
+}
+
+.plan-input{
+width:100%;
+padding:14px;
+border:1px solid #efc6d6;
+border-radius:14px;
+font-size:16px;
+margin-top:8px;
+outline:none;
+font-family:Arial,sans-serif;
+}
+
+.plan-input:focus{
+border-color:#df78a5;
 }
 
 .final{
-  font-size:18px;
-  color:#e16e9c;
-  line-height:1.8;
+font-size:18px;
+color:#d66b99;
+line-height:1.9;
 }
 
 .back{
-  margin-top:18px;
-  background:transparent;
-  border:0;
-  color:#c56b91;
-  cursor:pointer;
-  font-size:14px;
+margin-top:18px;
+background:transparent;
+border:0;
+color:#c06a90;
+cursor:pointer;
+font-size:14px;
 }
 
 @media(max-width:600px){
-  .container{
-    min-height:100vh;
-    width:100%;
-    border-radius:0;
-    padding:25px 18px;
-  }
 
-  .page{
-    min-height:90vh;
-  }
+.container{
+min-height:100vh;
+width:100%;
+border-radius:0;
+padding:25px 18px;
+}
 
-  .gifts{
-    grid-template-columns:1fr;
-  }
+.page{
+min-height:90vh;
+}
 
-  .gift{
-    height:105px;
-  }
+.gifts{
+grid-template-columns:1fr;
+}
 
-  .gift-icon{
-    display:inline-block;
-    font-size:42px;
-    margin:0 10px 0 0;
-    vertical-align:middle;
-  }
+.gift{
+height:105px;
+}
+
+.gift-icon{
+display:inline-block;
+font-size:42px;
+margin:0 10px 0 0;
+vertical-align:middle;
+}
+
 }
 </style>
 </head>
@@ -245,6 +260,7 @@ p{
 <div class="container">
 
 <!-- HOME -->
+
 <section id="home" class="page active">
 
 <div class="cake">🎂</div>
@@ -257,8 +273,10 @@ Arwa ♡
 </h1>
 
 <p>
-I couldn't be there with you today...<br>
-so I made you a little something instead.
+I miss you.<br>
+I wanted to make something with my own hands
+to show you how much I love you —
+even if it's something small like this.
 </p>
 
 <button class="main-btn" onclick="showPage('gifts')">
@@ -269,14 +287,15 @@ Open Your Surprise 🎁
 
 
 <!-- GIFTS -->
+
 <section id="gifts" class="page">
 
 <div class="small">A little something for you</div>
 
-<h2>Choose a Gift 🎁</h2>
+<h2>Three Little Gifts 🎁</h2>
 
 <p>
-No wrong choice... but the last one is special 👀
+Pick whichever one you want first 👀
 </p>
 
 <div class="gifts">
@@ -291,17 +310,22 @@ Our Little Story
 Things I Love About You
 </button>
 
-<button class="gift" onclick="showPage('letter')">
-<span class="gift-icon">💌</span>
-A Letter For You
+<button class="gift" onclick="showPage('plans')">
+<span class="gift-icon">✈️</span>
+Our Little Plans
 </button>
 
 </div>
+
+<p style="margin-top:30px;color:#b47792;font-size:14px;">
+And there is one last thing waiting for you... 💌
+</p>
 
 </section>
 
 
 <!-- STORY -->
+
 <section id="story" class="page">
 
 <div class="small">Gift No. 1</div>
@@ -311,25 +335,38 @@ A Letter For You
 <div class="story">
 
 <div class="story-item">
-<strong>Before the three months...</strong><br>
-Our story had already started long before we officially became "us."
+<strong>It actually started way before this.</strong><br>
+There was a whole part of our story where we weren't even talking anymore.
+We had lost touch for a long time, even though you already knew how you felt about me.
 </div>
 
 <div class="story-item">
-<strong>The funny part...</strong><br>
-You already had feelings for me... and I was just taking my time to figure everything out. 😂
+<strong>And then there was December 2024.</strong><br>
+That's when you realized your feelings for me.
+I just didn't understand what was happening between us at the time.
 </div>
 
 <div class="story-item">
-<strong>Then I finally knew.</strong><br>
-Three months ago, I realized what was right in front of me — and I'm really glad I did.
+<strong>Then, three months ago, I reached out.</strong><br>
+I finally came back and told you how I felt too.
+And somehow, after all that time apart, we found our way back to each other.
+</div>
+
+<div class="story-item">
+<strong>The truth is...</strong><br>
+I was surprised, and I needed time.
+I was going through a difficult period, scared of relationships,
+and honestly afraid to even understand my own feelings.
 </div>
 
 </div>
 
 <p>
-Maybe three months isn't a long time...<br>
-but somehow, you already feel like someone I've known for much longer. ❤️
+Maybe our relationship is only three months old...
+<br>
+but our story definitely isn't.
+<br><br>
+And I'm really glad I finally found my way back to you. ❤️
 </p>
 
 <button class="back" onclick="showPage('gifts')">
@@ -339,7 +376,8 @@ but somehow, you already feel like someone I've known for much longer. ❤️
 </section>
 
 
-<!-- THINGS -->
+<!-- THINGS I LOVE -->
+
 <section id="things" class="page">
 
 <div class="small">Gift No. 2</div>
@@ -352,44 +390,78 @@ but somehow, you already feel like someone I've known for much longer. ❤️
 
 <button class="option" onclick="this.classList.toggle('open')">
 💗 Your attention
+
 <div class="answer">
-I love how you care about the little things and somehow always make me feel that I'm on your mind.
+One of the things I'll never forget is how you care about me.
+You used to make donations to charities whenever you felt I wasn't doing well,
+and pray for me just because you wanted me to be okay.
+That kind of love means more to me than you probably realize.
 </div>
+
 </button>
+
 
 <button class="option" onclick="this.classList.toggle('open')">
 👀 Your beautiful eyes
+
 <div class="answer">
-Honestly... I don't think I need to explain this one. 😂❤️
+I love your eyes.
+I don't even have a complicated explanation for it. 😂❤️
+I just do.
 </div>
+
 </button>
+
 
 <button class="option" onclick="this.classList.toggle('open')">
 🧠 The way you think
+
 <div class="answer">
-I love your mind, the way you look at things, and the way you have your own way of seeing the world.
+I love how smart and mature you are.
+You're different in a way that's hard for me to explain.
+You have your own mind, your own way of looking at things,
+and there's always something real going on inside your head.
 </div>
+
 </button>
 
-<button class="option" onclick="this.classList.toggle('open')">
-🌷 Your softness
-<div class="answer">
-There's something light and sweet about you that makes being around you feel easy.
-</div>
-</button>
 
 <button class="option" onclick="this.classList.toggle('open')">
-✨ The little things you do
+🌷 The way you feel
+
 <div class="answer">
-Sometimes it's the smallest things you probably don't even notice that stay in my head the most.
+You're light.
+You're sweet.
+And somehow, you're just easy on the heart.
+I don't really know how to explain that feeling...
+I just feel it whenever I'm with you.
 </div>
+
 </button>
+
+
+<button class="option" onclick="this.classList.toggle('open')">
+✨ The way you love me
+
+<div class="answer">
+The fact that you love me as I am is already enough.
+You don't need me to be someone else.
+And knowing that I can just be myself with you means more than I can say.
+</div>
+
+</button>
+
 
 <button class="option" onclick="this.classList.toggle('open')">
 ❤️ The way you make me feel
+
 <div class="answer">
-I just like being yours. That's probably the simplest way I can say it.
+I feel comfortable with you.
+I don't feel like I have to pretend or overthink every little thing.
+I can just be me.
+And honestly, that's one of my favorite things about us.
 </div>
+
 </button>
 
 </div>
@@ -401,10 +473,99 @@ I just like being yours. That's probably the simplest way I can say it.
 </section>
 
 
+<!-- PLANS -->
+
+<section id="plans" class="page">
+
+<div class="small">A little something for later</div>
+
+<h2>When I'm Back ✈️</h2>
+
+<p>
+I don't really care where we go.
+<br>
+I just want to spend time with you.
+</p>
+
+<div class="letter">
+
+<strong>
+So... you get to decide.
+</strong>
+
+<br><br>
+
+The place.<br>
+The movie.<br>
+The food.<br>
+The night.<br>
+The whole plan. 😂❤️
+
+<br><br>
+
+<label>
+<strong>What do you want us to do?</strong>
+</label>
+
+<input
+id="plan"
+class="plan-input"
+placeholder="Your choice...">
+
+<br><br>
+
+<label>
+<strong>And what else do you want?</strong>
+</label>
+
+<input
+id="wish"
+class="plan-input"
+placeholder="Anything you want...">
+
+<br><br>
+
+<small style="color:#b47792;">
+This list is yours. I'm just waiting to make it happen.
+</small>
+
+</div>
+
+<button class="main-btn" onclick="savePlan()">
+Save Our List ❤️
+</button>
+
+<button class="back" onclick="showPage('gifts')">
+← Back to gifts
+</button>
+
+</section>
+
+
+<!-- SAVED PLAN -->
+
+<section id="saved" class="page">
+
+<div class="cake">🥹❤️</div>
+
+<div class="small">Okay, it's official</div>
+
+<h2>It's A Deal.</h2>
+
+<p id="savedText"></p>
+
+<button class="main-btn" onclick="showPage('letter')">
+One Last Thing... 💌
+</button>
+
+</section>
+
+
 <!-- LETTER -->
+
 <section id="letter" class="page">
 
-<div class="small">The last gift</div>
+<div class="small">The last thing</div>
 
 <h2>A Letter For You 💌</h2>
 
@@ -412,23 +573,70 @@ I just like being yours. That's probably the simplest way I can say it.
 
 Arwa,
 
+<br><br>
+
 I love you.
+
+<br><br>
 
 And honestly, I'm sorry for all the time I wasted before you.
 
-You know how my mind works, and you know that sometimes I take my time to realize things... but I'm really glad I finally did.
+<br><br>
 
-I don't want to waste any more time.
+I'm sorry I didn't make the most of those college days,
+when I could have seen you every day and gotten closer to you.
 
-I want us to make up for all those missed moments.
+I'm sorry that after we graduated,
+we somehow let all that time pass without talking.
 
-I want us to have our own life together, travel, stay up late talking about absolutely nothing, laugh until we can't breathe, and do all the little things you've always wished for.
+And more than anything,
+I'm sorry that I wasn't there for you during some of the hardest times you went through.
+I know that, in some way, I was even part of that difficult time.
 
-I want to see you happy, and I want to be there for the moments that make you happy.
+<br><br>
 
-Maybe we're only three months in, but I already know there's so much more I want to experience with you.
+I wish I had understood my feelings sooner.
+I wish I had been braver.
 
-And I promise you... we'll make up for the time we lost. ❤️
+But I can't change the time we lost.
+
+What I can do is make sure we don't waste what comes next.
+
+<br><br>
+
+I want to make up for all of it with you.
+
+I want us to have our own life together.
+I want us to travel,
+stay up late talking about absolutely nothing,
+go out at night,
+walk around with no real plan,
+and do all the little things you've always wanted to do.
+
+I want to wake up and find you next to me.
+I want to randomly bring you something you love.
+I want the ordinary days with you just as much as the big ones.
+
+<br><br>
+
+Maybe we're only three months in,
+but I already know there's so much more I want to experience with you.
+
+<br><br>
+
+And I need you to know something:
+
+I love you.
+I'm completely gone for you. 😂❤️
+
+And no matter how long it takes,
+I'll get there.
+We'll have our time.
+We'll make up for everything we missed.
+
+<br><br>
+
+I promise.
 
 </div>
 
@@ -444,6 +652,7 @@ One Last Thing...
 
 
 <!-- FINAL -->
+
 <section id="final" class="page">
 
 <div class="cake">❤️</div>
@@ -454,30 +663,48 @@ One Last Thing...
 
 <p class="final">
 
-I know a real gift isn't really what you want right now,
-and I completely understand.
+I know you probably wouldn't want me to send you
+a material gift right now,
+and I completely understand that.
 
 <br><br>
 
-So for now, let this be my little birthday gift to you.
+So for now,
+this is the least I can give you from here —
+something I made with my own hands
+just to remind you how much I love you.
 
 <br><br>
 
-And when we're finally together,
-I'll make up for this one properly.
+And I need you to know...
 
-<br>
+you are always, always on my mind.
 
-<strong>And hopefully, it'll be much better. ❤️</strong>
+You're always missed.
+Every day.
 
-</p>
+<br><br>
 
-<p>
-Happy Birthday, Arwa. 🎂
+And somehow,
+I've become completely obsessed with you. 😂❤️
+
+<br><br>
+
+So... enjoy your birthday.
+
+And I hope one day soon,
+I won't have to celebrate it from another country.
+
+<br><br>
+
+<strong>
+Until then, this is my little piece of me with you.
+</strong>
+
 </p>
 
 <button class="main-btn" onclick="celebrate()">
-♡
+Happy Birthday, Arwa ❤️
 </button>
 
 </section>
@@ -502,33 +729,69 @@ behavior:'smooth'
 
 }
 
+
+function savePlan(){
+
+let plan=document.getElementById('plan').value.trim();
+let wish=document.getElementById('wish').value.trim();
+
+let first=plan || "Whatever you choose";
+let second=wish || "Whatever else you want";
+
+document.getElementById('savedText').innerHTML=
+"Alright... it's officially a plan. ❤️<br><br>"+
+"<strong>"+escapeHTML(first)+"</strong>"+
+"<br><br>"+
+escapeHTML(second)+
+"<br><br>"+
+"I'll be holding you to this when I'm back. 😌";
+
+showPage('saved');
+
+}
+
+
+function escapeHTML(text){
+
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
 function celebrate(){
 
-document.body.style.background=
-"linear-gradient(135deg,#f3a0c1,#ffe5ef)";
+for(let i=0;i<50;i++){
 
-for(let i=0;i<35;i++){
+let heart=document.createElement('div');
 
-let heart=document.createElement("div");
+heart.textContent=
+['❤️','💗','💕','✨','💖'][Math.floor(Math.random()*5)];
 
-heart.innerHTML="❤️";
-
-heart.style.position="fixed";
-heart.style.left=Math.random()*100+"vw";
-heart.style.top="-30px";
-heart.style.fontSize=(15+Math.random()*25)+"px";
-heart.style.zIndex="999";
-heart.style.transition="top 2.5s linear, opacity 2.5s";
+heart.style.position='fixed';
+heart.style.left=Math.random()*100+'vw';
+heart.style.top='-30px';
+heart.style.fontSize=(16+Math.random()*24)+'px';
+heart.style.zIndex='999';
+heart.style.transition='top 2.5s linear, opacity 2.5s';
 
 document.body.appendChild(heart);
 
 setTimeout(function(){
-heart.style.top="110vh";
-heart.style.opacity="0";
+
+heart.style.top='110vh';
+heart.style.opacity='0';
+
 },50);
 
 setTimeout(function(){
+
 heart.remove();
+
 },2700);
 
 }
